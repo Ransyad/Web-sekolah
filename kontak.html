@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak - SMK Guna Dharma Nusantara</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Open Sans', sans-serif;
+}
+
+/* Navbar */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background-color:#1e73be;
+padding:10px 20px;
+top:0;
+z-index:1000;
+}
+
+/* burger menu */
+.menu-btn{
+font-size:28px;
+color:white;
+cursor:pointer;
+}
+
+/* sidebar */
+.sidebar{
+height:100%;
+width:0;
+position:fixed;
+top:0;
+left:0;
+background-color:#333;
+overflow-x:hidden;
+transition:0.3s;
+padding-top:60px;
+z-index:2000;
+}
+
+/* link menu */
+.sidebar a{
+padding:10px 20px;
+text-decoration:none;
+font-size:20px;
+color:white;
+display:block;
+}
+
+.sidebar a:hover{
+background-color:#575757;
+}
+
+/* tombol tutup */
+.close{
+position:absolute;
+top:15px;
+right:25px;
+font-size:35px;
+color:white;
+}
+
+/* submenu jurusan */
+.submenu{
+display:none;
+background-color:#444;
+}
+
+.submenu a{
+font-size:18px;
+padding-left:40px;
+}
+
+/* banner */
+.banner{
+background:#123a8c;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+/* content */
+.container{
+display:flex;
+flex-wrap:wrap;
+padding:40px;
+gap:30px;
+}
+
+.card{
+flex:1;
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:4px 4px 10px dodgerblue;
+transition:0.3s;
+}
+
+
+
+.form{
+flex:1;
+background: white;
+padding:20px;
+border-radius:10px;
+box-shadow: 4px 4px 10px dodgerblue;
+position: relative;
+top: 30px;
+}
+
+.form input, .form textarea{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border:1px solid #ccc;
+}
+
+.form button{
+background:#123a8c;
+color:white;
+padding:10px;
+border:none;
+cursor:pointer;
+}
+
+
+
+.formulir {
+font-size: 13px;
+position: relative;
+top: -3px;
+}
+
+.footer{
+  background: linear-gradient(135deg, #1d2d3d, #1d2d3d);
+  color: white;
+  padding:50px 20px 20px;
+  margin-top: 30px;
+}
+
+.footer-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:space-between;
+}
+
+.footer-col{
+  flex:1;
+  min-width:220px;
+  position: relative;
+  top: -30px;
+}
+
+
+.footer-logo{
+  width:200px;
+  margin-bottom:20px;
+}
+
+.footer-col h2{
+  margin-bottom:15px;
+  position:relative;
+  top: -30px;
+}
+
+
+.footer-col a{
+  display:block;
+  color: white;
+  text-decoration:none;
+  margin-bottom:8px;
+  transition:0.3s;
+  position: relative;
+  top: -35px;
+}
+
+.footer-col a:hover{
+  color:#00c3ff;
+  transform:translateX(5px);
+}
+
+.footer-col p{
+  font-size: 14px;
+  line-height: 3;
+  position: relative;
+  top: -30px;
+}
+
+/* SOCIAL */
+.social{
+  text-align: center;
+  margin-top:30px;
+  position: relative;
+  top: -1px;
+  
+}
+
+.social a{
+  display:inline-block;
+  margin:0 10px;
+  font-size:20px;
+  color:white;
+  transition:0.3s;
+}
+
+/* BOTTOM */
+.footer-bottom{
+  text-align:left;
+  margin-top:20px;
+  border-top:1px solid rgba(255,255,255,0.3);
+  padding-top:15px;
+  font-size:20px;
+  
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+<a href="index.html">
+<img id="logo" src="foto/logo navbar.png" alt="logo" width="36%" height="36%">
+</a>
+
+<span class="menu-btn" onclick="openMenu()">☰</span>
+</div>
+
+<!-- Sidebar -->
+<div id="menu" class="sidebar">
+
+<a href="javascript:void(0)" class="close" onclick="closeMenu()">×</a>
+
+<a href="index.html">Home</a>
+
+
+<a href="#" onclick="toggleJurusan()">Kompetensi Keahlian</a>
+
+<div id="submenu-jurusan" class="submenu">
+<a href="farmasi.html">Farmasi</a>
+<a href="tkj.html">TKJ</a>
+<a href="tein.html">TEIN</a>
+</div>
+
+<a href="kontak.html">Kontak</a>
+<a href="profil.html">Profil</a>
+
+</div>
+
+<!-- Banner -->
+<div class="banner">
+<h1>Kontak Kami</h1><br>
+<p>Kami siap membantu menjawab berbagai pertanyaan Anda terkait pendaftaran peserta didik baru, program keahlian, fasilitas, serta kegiatan di SMK Guna Dharma Nusantara.</p>
+</div>
+
+<!-- Content -->
+<div class="container">
+
+<div class="card">
+<h4>Informasi Kontak</h4><br>
+<p><b>Alamat:</b><br> JL. RAYA BY PASS KM.30 CIPEUTAG - CIKOPO</p>
+<p><b>Telepon:</b><br> 0227952201</p>
+<p><b>Email:</b> gunadharmanusantarasmk@yahoo</p>
+</div>
+
+<div class="form">
+<h2>Kirim Pesan</h2><br>
+<p class="formulir" >Nama Lengkap*</p>
+<input type="text" placeholder="Nama">
+<p class="formulir"> Email*</p>
+<input type="email" placeholder="Example@gmail.com">
+<p class="formulir"> no hp*</p>
+<input type="email" >
+<p class="formulir"> pesan/pertanyaan</p>
+<textarea rows="5" placeholder="Pesan"></textarea>
+<button>Kirim</button>
+</div>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script>
+function openMenu(){
+document.getElementById("menu").style.width = "250px";
+}
+
+function closeMenu(){
+document.getElementById("menu").style.width = "0";
+}
+
+function toggleJurusan(){
+var submenu = document.getElementById("submenu-jurusan");
+if(submenu.style.display === "block"){
+submenu.style.display = "none";
+}else{
+submenu.style.display = "block";
+}
+}
+</script>
+<footer class="footer">
+  
+  <div class="footer-container">
+    
+    <!-- Kolom 1 -->
+    <div class="footer-col">
+      <img src="foto/logo navbar.png" class="footer-logo"></div>
+    <div class="footer-col">
+      <p>
+        JL. RAYA BY PASS KM.30 <br>
+        Cicalengka, Bandung <br>
+        West Java, Indonesia 40395</p>
+    </div>
+      
+      <!-- Kolom 2 -->
+      <div class="footer-col">
+        <h2>Navigasi</h2>
+        <a href="index.html">Home</a>
+        <a href="profil.html">Profil</a>
+        <a href="farmasi.html">Farmasi</a>
+        <a href="tkj.html">TKJ</a>
+        <a href="tein.html">TEIN</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+      
+      <!-- Kolom 4 -->
+      <div class="footer-col">
+        <h2>contac with us</h2>
+        <p>📍 JL. RAYA BY PASS KM.30 CIPEUTAG - CIKOPO</p>
+        <p>📞 0227952201</p>
+        <p>✉️ gunadharmanusantarasmk@yahoo.co.id</p>
+      </div>
+      
+    </div>
+    
+    <!-- Sosial Media -->
+    <div class="social">
+      <a href="#"><img src="foto 2/email.png" width="38"> </a>
+      <a href="#"><img src="foto 2/wa.png" width="38"></a>
+      <a href="#"><img src="foto 2/ig.png" width="38" </a>
+    </div>
+    
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2026 SMK Guna Dharma Nusantara | All Rights Reserved</p>
+    </div>
+    
+</footer>
+</body>
+</html>

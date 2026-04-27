@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+<title>Website Sekolah</title>
+
+<style>
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  font-family:Arial;
+}
+
+/* Navbar */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background-color:#1e73be;
+padding:10px 20px;
+top:0;
+z-index:100;
+}
+
+/* logo */
+#logo{
+height:50px;
+}
+
+/* burger menu */
+.menu-btn{
+font-size:28px;
+color:white;
+cursor:pointer;
+}
+
+/* sidebar */
+.sidebar{
+height:100%;
+width:0;
+position:fixed;
+top:0;
+left:0;
+background-color:#333;
+overflow-x:hidden;
+transition:0.3s;
+padding-top:60px;
+z-index:2000;
+}
+
+/* link menu */
+.sidebar a{
+padding:10px 20px;
+text-decoration:none;
+font-size:20px;
+color:white;
+display:block;
+}
+
+.sidebar a:hover{
+background-color:#575757;
+}
+
+/* tombol tutup */
+.close{
+position:absolute;
+top:15px;
+right:25px;
+font-size:35px;
+color:white;
+}
+
+/* submenu jurusan */
+.submenu{
+display:none;
+background-color:#444;
+}
+
+.submenu a{
+font-size:18px;
+padding-left:40px;
+}
+
+/* konten */
+.content{
+padding:20px;
+}
+.paragraf{
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+}
+.nav {
+  color: blue;
+  font-family: 'Poppins', sans-serif;
+}
+.bold {
+  font-weight: bold;
+}
+
+.footer{
+  background: linear-gradient(135deg, #1d2d3d, #1d2d3d);
+  color: white;
+  padding:50px 20px 20px;
+  margin-top:auto;
+}
+
+.footer-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:space-between;
+}
+
+.footer-col{
+  flex:1;
+  min-width:220px;
+  position: relative;
+  
+}
+
+.footer-logo{
+  width:200px;
+  margin-bottom:20px;
+}
+
+.footer-col h2""{
+  margin-bottom:15px;
+  position:relative;
+  top: -20px;
+}
+
+
+.footer-col p{
+  font-size:14px;
+  line-height:0.3;
+}
+
+
+.footer-col a{
+  display:block;
+  color: white;
+  text-decoration:none;
+  margin-bottom:8px;
+  transition:0.3s;
+  position: relative;
+  top: -20px;
+}
+
+.footer-col a:hover{
+  color:#00c3ff;
+  transform:translateX(5px);
+}
+
+.footer-col p{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* SOCIAL */
+.social{
+  text-align: center;
+  margin-top:30px;
+  position: relative;
+  top: 45px;
+  left: 100px;
+}
+
+.social a{
+  display:inline-block;
+  margin:0 10px;
+  font-size:20px;
+  color:white;
+  transition:0.3s;
+}
+
+/* BOTTOM */
+.footer-bottom{
+  text-align:left;
+  margin-top:20px;
+  border-top:1px solid rgba(255,255,255,0.3);
+  padding-top:15px;
+  font-size:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+<a href="index.html">
+<img id="logo" src="foto/logo navbar.png" alt="logo" ></a>
+
+<span class="menu-btn" onclick="openMenu()">☰</span>
+
+</div>
+
+<!-- Sidebar -->
+<div id="menu" class="sidebar">
+
+<a href="javascript:void(0)" class="close" onclick="closeMenu()">×</a>
+
+<a href="index.html">Home</a>
+<a href="#" onclick="toggleJurusan()">Kompetensi Keahlian</a>
+<div id="submenu-jurusan" class="submenu">
+<a href="farmasi.html">Farmasi</a>
+<a href="tkj.html">TKJ</a>
+<a href="tein.html">TEIN</a>
+</div>
+<a href="kontak.html">Kontak</a>
+<a href="profil.html">Profil</a>
+
+</div>
+
+<!-- Konten -->
+<div class="content">
+
+<h1 style="text-align:left;">Farmasi</h1>
+<div class="nav"><a href="index.html" style="color:blue;" >home</a> > Jurusan > Farmasi</div><br><br>
+<img src="foto/farm.jpeg" alt="foto farmasi.jpg" width="420"
+<div class="paragraf">
+<p>
+Jurusan Farmasi merupakan program keahlian yang mempelajari ilmu kefarmasian yang berkaitan dengan obat-obatan serta pelayanan kesehatan kepada masyarakat. Di jurusan ini siswa dikenalkan dengan berbagai jenis obat, mulai dari bahan obat alami maupun bahan kimia, fungsi obat, serta cara penggunaan obat yang tepat dan aman. Siswa juga mempelajari bagaimana obat dapat memberikan manfaat bagi kesehatan serta bagaimana cara mencegah kesalahan dalam penggunaan obat.
+</p>
+<br>
+<p>
+Selain mempelajari teori tentang obat-obatan, siswa di jurusan farmasi juga mendapatkan pembelajaran praktik di laboratorium. Dalam kegiatan praktik tersebut siswa dilatih untuk mengenal alat-alat laboratorium, meracik obat, menimbang bahan obat, serta melakukan pengolahan obat sesuai dengan prosedur yang benar. Siswa juga mempelajari cara penyimpanan obat yang baik agar kualitas obat tetap terjaga serta aman untuk digunakan oleh pasien.
+</p>
+<br>
+<p>
+Jurusan Farmasi juga memberikan pengetahuan tentang pelayanan kefarmasian kepada masyarakat. Siswa diajarkan bagaimana cara memberikan informasi yang benar mengenai penggunaan obat, dosis obat, serta hal-hal yang perlu diperhatikan saat mengonsumsi obat. Selain itu, siswa juga dilatih untuk memiliki sikap teliti, disiplin, dan bertanggung jawab karena pekerjaan di bidang farmasi sangat berkaitan dengan kesehatan dan keselamatan manusia.
+</p>
+<br>
+<p>
+Dengan pembelajaran teori dan praktik yang seimbang, jurusan farmasi bertujuan untuk menghasilkan lulusan yang memiliki pengetahuan dan keterampilan di bidang kefarmasian. Lulusan diharapkan mampu bekerja secara profesional serta dapat berkontribusi dalam membantu pelayanan kesehatan di masyarakat melalui bidang farmasi.
+</p><br>
+<p class="bold">Visi: </class>
+<p></p><br>
+Menjadi program keahlian farmasi yang menghasilkan tenaga terampil, berkompeten, dan beretika di bidang kefarmasian.</p><br>
+<p class="bold">Misi: </class>
+<p><br>
+Untuk mencapai Visi diatas, SMK Guna Dharma Nusantara menetapkan misi sebagai berikut :<br><br>
+1. Menyelenggarakan pembelajaran farmasi yang berkualitas.<br>
+2. Membekali siswa dengan pengetahuan tentang obat dan pelayanan kefarmasian.<br>
+3. Menumbuhkan sikap disiplin, teliti, dan bertanggung jawab dalam bidang kesehatan.<br>
+4. Mempersiapkan lulusan yang siap bekerja di apotek, klinik, maupun industri farmasi.</p><br>
+<p class="bold">Tujuan: </class>
+<p><br>
+Tujuan dari jurusan Farmasi adalah untuk membekali siswa dengan pengetahuan, keterampilan, dan sikap profesional di bidang kefarmasian. Melalui pembelajaran teori dan praktik, siswa diharapkan mampu memahami cara pengolahan obat, menjaga kualitas obat, serta memberikan pelayanan yang baik kepada masyarakat di bidang kesehatan. Jurusan ini juga bertujuan membentuk siswa yang teliti, disiplin, dan bertanggung jawab dalam pekerjaan yang berkaitan dengan kesehatan.</p><br>
+<p class="bold">Prospek karir:</class>
+<p><br>
+</div>
+<class="jarak">
+1. Tenaga Teknis Kefarmasian di Apotek (membantu dalam pelayanan obat kepada pasien serta pengelolaan obat di apotek).<br>
+2. Tenaga Farmasi di Klinik atau Rumah Sakit (membantu dalam penyiapan, penyimpanan, dan pendistribusian obat sesuai prosedur).<br>
+3. Asisten Laboratorium Farmasi (membantu proses pengujian, penelitian, dan pengolahan bahan obat di laboratorium).<br>
+4. Tenaga Produksi di Industri Farmasi (terlibat dalam proses pembuatan dan pengemasan obat-obatan di perusahaan farmasi).<br>
+5. Quality Control atau Quality Assurance (membantu memastikan kualitas obat sesuai dengan standar yang telah ditetapkan).<br>
+6. Wirausaha di Bidang Farmasi atau Kesehatan (membuka usaha yang berkaitan dengan obat-obatan, alat kesehatan, atau produk kesehatan lainnya).</p>
+
+
+</div>
+</div>
+<br>
+</div>
+
+<script>
+
+function openMenu(){
+document.getElementById("menu").style.width="250px";
+}
+
+function closeMenu(){
+document.getElementById("menu").style.width="0";
+}
+
+function toggleJurusan(){
+
+var menu=document.getElementById("submenu-jurusan");
+
+if(menu.style.display==="block"){
+menu.style.display="none";
+}else{
+menu.style.display="block";
+}
+
+}
+
+
+
+</script>
+<footer class="footer">
+  
+  <div class="footer-container">
+    
+    <!-- Kolom 1 -->
+    <div class="footer-col">
+      <img src="foto/logo navbar.png" class="footer-logo" >
+  
+<p style="font-size: 15px; position: relative; top: -30px; line-height: 1.6;"> 
+JL. RAYA BY PASS KM.30 <br>
+Cicalengka, Bandung <br>
+ West Java, Indonesia 40395</p>
+  
+    
+    <!-- Kolom 2 -->
+    <div class="footer-col">
+      <h2>Navigasi</h2>
+      <a href="index.html">Home</a>
+      <a href="profil.html">Profil</a>
+      <a href="farmasi.html">Farmasi</a>
+      <a href="tkj.html">TKJ</a>
+      <a href="tein.html">TEIN</a>
+      <a href="kontak.html">Kontak</a>
+    </div>
+    
+    <!-- Kolom 4 -->
+    <div class="footer-col">
+      <h2>contac with us</h2>
+      <p>📍 JL. RAYA BY PASS KM.30 CIPEUTAG - CIKOPO</p>
+      <p>📞 0227952201</p>
+      <p>✉️ gunadharmanusantarasmk@yahoo</p>
+    </div>
+    
+  </div>
+  
+  <!-- Sosial Media -->
+  <div class="social">
+    <a href="#"><img src="foto 2/email.png" width="38"> </a>
+    <a href="#"><img src="foto 2/wa.png" width="38" ></a>
+    <a href="#"><img src="foto 2/ig.png" width="38"</a>
+  </div>
+  
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2026 SMK Guna Dharma Nusantara | All Rights Reserved</p>
+  </div>
+  
+</footer>
+</body>
+</html>

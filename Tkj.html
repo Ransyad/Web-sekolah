@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+<title>Website Sekolah</title>
+
+<style>
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  font-family:Arial;
+}
+
+/* Navbar */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background-color:#1e73be;
+padding:10px 20px;
+top:0;
+z-index:100;
+
+}
+
+
+/* burger menu */
+.menu-btn{
+font-size:28px;
+color:white;
+cursor:pointer;
+}
+
+/* sidebar */
+.sidebar{
+height:100%;
+width:0;
+position:fixed;
+top:0;
+left:0;
+background-color:#333;
+overflow-x:hidden;
+transition:0.3s;
+padding-top:60px;
+z-index:2000;
+}
+
+/* link menu */
+.sidebar a{
+padding:10px 20px;
+text-decoration:none;
+font-size:20px;
+color:white;
+display:block;
+}
+
+.sidebar a:hover{
+background-color:#575757;
+}
+
+/* tombol tutup */
+.close{
+position:absolute;
+top:15px;
+right:25px;
+font-size:35px;
+color:white;
+}
+
+/* submenu jurusan */
+.submenu{
+display:none;
+background-color:#444;
+}
+
+.submenu a{
+font-size:18px;
+padding-left:40px;
+}
+
+/* konten */
+.content{
+padding:20px;
+}
+.paragraf{
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+}
+.nav {
+  color: blue;
+  font-family: 'Poppins', sans-serif;
+}
+.bold {
+  font-weight: bold;
+}
+
+.footer{
+  background: linear-gradient(135deg, #1d2d3d, #1d2d3d);
+  color: white;
+  padding:50px 20px 20px;
+  margin-top:auto;
+}
+
+.footer-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:space-between;
+}
+
+.footer-col{
+  flex:1;
+  min-width:220px;
+  position: relative;
+  
+}
+
+.footer-logo{
+  width:200px;
+  margin-bottom:20px;
+}
+
+.footer-col h2""{
+  margin-bottom:15px;
+  position:relative;
+  top: -20px;
+}
+
+
+.footer-col p{
+  font-size:14px;
+  line-height:0.3;
+}
+
+
+.footer-col a{
+  display:block;
+  color: white;
+  text-decoration:none;
+  margin-bottom:8px;
+  transition:0.3s;
+  position: relative;
+  top: -20px;
+}
+
+.footer-col a:hover{
+  color:#00c3ff;
+  transform:translateX(5px);
+}
+
+.footer-col p{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* SOCIAL */
+.social{
+  text-align: center;
+  margin-top:30px;
+  position: relative;
+  top: 45px;
+  left: 100px;
+}
+
+.social a{
+  display:inline-block;
+  margin:0 10px;
+  font-size:20px;
+  color:white;
+  transition:0.3s;
+}
+
+/* BOTTOM */
+.footer-bottom{
+  text-align:left;
+  margin-top:20px;
+  border-top:1px solid rgba(255,255,255,0.3);
+  padding-top:15px;
+  font-size:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+<a href="index.html">
+<img id="logo" src="foto/logo navbar.png" alt="logo" width="36%" height="36%"></a>
+
+<span class="menu-btn" onclick="openMenu()">☰</span>
+
+</div>
+
+<!-- Sidebar -->
+<div id="menu" class="sidebar">
+
+<a href="javascript:void(0)" class="close" onclick="closeMenu()">×</a>
+
+<a href="index.html">Home</a>
+
+
+<a href="#" onclick="toggleJurusan()">Kompetensi Keahlian</a>
+
+<div id="submenu-jurusan" class="submenu">
+<a href="farmasi.html">Farmasi</a>
+<a href="tkj.html">TKJ</a>
+<a href="tein.html">TEIN</a>
+</div>
+
+<a href="kontak.html">Kontak</a>
+<a href="profil.html">Profil</a>
+
+</div>
+
+<!-- Konten -->
+<div class="content">
+
+<h1 style="text-align:left;">TEKNIK KOMPUTER DAN JARINGAN (TKJ)</h1>
+<div class="nav"><a href="index.html" style="color:blue;" >home</a> > Jurusan > TKJ</div><br><br>
+<img src="foto/foto tkj.jpg" alt="foto tkj.jpg" width="420"
+<div class="paragraf">
+<p> Jurusan Teknik Komputer dan Jaringan (TKJ) merupakan program keahlian yang mempelajari ilmu tentang komputer, jaringan, dan teknologi informasi. Pada jurusan ini siswa mempelajari berbagai materi seperti perakitan komputer, instalasi sistem operasi, konfigurasi jaringan, serta pemeliharaan dan perbaikan perangkat komputer maupun jaringan.
+<br><br>
+Selain mempelajari teori tentang komputer dan jaringan, siswa juga diberikan banyak kegiatan praktik di laboratorium komputer. Dalam kegiatan praktik tersebut siswa dilatih untuk merakit komputer, menginstal sistem operasi, membuat jaringan komputer seperti LAN dan WAN, serta melakukan konfigurasi perangkat jaringan seperti router dan switch.
+<br><br>
+Siswa juga mempelajari cara melakukan troubleshooting atau perbaikan ketika terjadi kerusakan pada komputer maupun jaringan. Dengan demikian, siswa mampu memahami cara kerja perangkat komputer dan jaringan serta dapat mengatasi berbagai masalah yang terjadi pada sistem komputer dan jaringan.
+<br><br>
+Jurusan TKJ juga memberikan pengetahuan tentang perkembangan teknologi informasi yang terus berkembang di masyarakat. Siswa diajarkan bagaimana memanfaatkan teknologi secara efektif, aman, dan bertanggung jawab. Selain itu, siswa juga dilatih untuk memiliki keterampilan, disiplin, serta kemampuan bekerja secara mandiri maupun dalam tim di bidang teknologi informasi.<br>
+<br>
+Dengan pembelajaran teori dan praktik yang seimbang, jurusan TKJ bertujuan untuk menghasilkan lulusan yang memiliki pengetahuan dan keterampilan di bidang komputer dan jaringan sehingga mampu bekerja secara profesional serta dapat berkontribusi dalam perkembangan teknologi informasi di masyarakat.
+</p>
+<br>
+<p class="bold">Visi: </class>
+<p></p>
+Menjadi program keahlian Teknik Komputer dan Jaringan yang menghasilkan tenaga terampil, kompeten, dan profesional di bidang teknologi informasi dan jaringan komputer.</p><br>
+<p class="bold">Misi: </class>
+<p>
+Untuk mencapai Visi diatas, SMK Guna Dharma Nusantara menetapkan misi sebagai berikut :<br>
+<ol>
+<li>Menyelenggarakan pembelajaran berbasis teknologi dan praktik.<br>
+<li>Membekali siswa dengan pengetahuan tentang komputer dan jaringan.<br>
+<li>Menumbuhkan sikap disiplin, tanggung jawab, dan kerja sama.<br>
+<li>Mempersiapkan lulusan yang siap bekerja di bidang teknologi informasi.</p><br>
+</p></ol>
+<p class="bold">Tujuan: </class>
+<p>
+Tujuan dari jurusan TKJ adalah untuk membekali siswa dengan pengetahuan, keterampilan, dan sikap profesional di bidang komputer dan jaringan. Melalui pembelajaran teori dan praktik, siswa diharapkan mampu merakit komputer, menginstal sistem operasi, membangun jaringan komputer, serta melakukan perawatan dan perbaikan perangkat komputer dan jaringan sehingga mampu memberikan layanan teknologi informasi yang baik di masyarakat maupun dunia kerja.</p><br>
+<p class="bold">Prospek karir:</class>
+<p>
+1. Teknisi komputer (perakitan dan perbaikan komputer).<br>
+2. Teknisi jaringan (instalasi dan pemeliharaan jaringan).<br>
+3. Administrator jaringan.<br>
+4. IT Support di perusahaan atau instansi.<br>
+5. Teknisi server dan jaringan internet.<br>
+6. Wirausaha di bidang servis komputer dan jaringan.</p>
+</div>
+
+</div>
+</div>
+<br>
+</div>
+
+<script>
+
+function openMenu(){
+document.getElementById("menu").style.width="250px";
+}
+
+function closeMenu(){
+document.getElementById("menu").style.width="0";
+}
+
+function toggleJurusan(){
+
+var menu=document.getElementById("submenu-jurusan");
+
+if(menu.style.display==="block"){
+menu.style.display="none";
+}else{
+menu.style.display="block";
+}
+
+}
+
+
+
+</script>
+<footer class="footer">
+  
+  <div class="footer-container">
+    
+    <!-- Kolom 1 -->
+    <div class="footer-col">
+      <img src="foto/logo navbar.png" class="footer-logo">
+      
+      <p style="font-size: 15px; position: relative; top: -30px; line-height: 1.6;">
+        JL. RAYA BY PASS KM.30 <br>
+        Cicalengka, Bandung <br>
+        West Java, Indonesia 40395</p>
+      
+      
+      <!-- Kolom 2 -->
+      <div class="footer-col">
+        <h2>Navigasi</h2>
+        <a href="index.html">Home</a>
+        <a href="profil.html">Profil</a>
+        <a href="farmasi.html">Farmasi</a>
+        <a href="tkj.html">TKJ</a>
+        <a href="tein.html">TEIN</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+      
+      <!-- Kolom 4 -->
+      <div class="footer-col">
+        <h2>contac with us</h2>
+        <p>📍 JL. RAYA BY PASS KM.30 CIPEUTAG - CIKOPO</p>
+        <p>📞 0227952201</p>
+        <p>✉️ gunadharmanusantarasmk@yahoo</p>
+      </div>
+      
+    </div>
+    
+    <!-- Sosial Media -->
+    <div class="social">
+      <a href="#"><img src="foto 2/email.png" width="38"> </a>
+      <a href="#"><img src="foto 2/wa.png" width="38"></a>
+      <a href="#"><img src="foto 2/ig.png" width="38" </a>
+    </div>
+    
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2026 SMK Guna Dharma Nusantara | All Rights Reserved</p>
+    </div>
+    
+</footer>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Website Sekolah</title>
+
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', Arial, sans-serif; /* Menggunakan font yang Anda panggil */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e73be;
+  padding: 10px 20px;
+  top: 0;
+  z-index: 100;
+}
+
+#logo {
+  height: 50px;
+  width: auto; /* Agar logo tidak gepeng */
+}
+
+.menu-btn {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 200;
+}
+
+.sidebar a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 35px;
+  color: white;
+}
+
+.submenu {
+  display: none;
+  background-color: #444;
+}
+
+.submenu a {
+  font-size: 18px;
+  padding-left: 40px;
+}
+
+/* Konten Responsif */
+.idk{
+  padding: 10px;
+  font-size: 15px;
+  position: relative;
+  top: -20px;
+}
+
+.idk p{
+  font-size: 15px;
+  position: relative;
+  top: -20px;
+  text-align: justify;
+}
+
+
+
+/* CSS ini yang membuat semua gambar pas di HP */
+.content img {
+  max-width: 100%; /* Gambar tidak akan lebih lebar dari layar HP */
+  height: auto;    /* Tinggi otomatis agar tidak gepeng */
+  display: block;
+  margin: 10px auto; /* Gambar otomatis di tengah */
+  border-radius: 10px; /* Tambahan agar lebih modern */
+}
+
+p {
+  padding: 10px;
+  text-align: justify;
+  font-size: 19px;
+}
+
+
+
+.img {
+  size-adjust: auto;
+  
+}
+
+.footer{
+  background: linear-gradient(135deg, #1d2d3d, #1d2d3d);
+  color: white;
+  padding:50px 20px 20px;
+  margin-top:auto;
+}
+
+.footer-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:space-between;
+}
+
+.footer-col{
+  flex:1;
+  min-width:220px;
+  position: relative;
+  
+}
+
+.footer-logo{
+  width:200px;
+  margin-bottom:15px;
+}
+
+.footer-col h2""{
+  margin-bottom:15px;
+  position:relative;
+  top: -20px;
+}
+
+
+.footer-col p{
+  font-size:14px;
+  line-height:0.3;
+}
+
+
+.footer-col a{
+  display:block;
+  color: white;
+  text-decoration:none;
+  margin-bottom:8px;
+  transition:0.3s;
+  position: relative;
+  top: -20px;
+}
+
+.footer-col a:hover{
+  color:#00c3ff;
+  transform:translateX(5px);
+}
+
+.footer-col p{
+  font-size: 14px;
+}
+
+/* SOCIAL */
+.social{
+  text-align:center;
+  margin-top:30px;
+  position: relative;
+  top: 45px;
+}
+
+.social a{
+  display:inline-block;
+  margin:0 10px;
+  font-size:20px;
+  color:white;
+  transition:0.3s;
+}
+
+/* BOTTOM */
+.footer-bottom{
+  text-align:center;
+  margin-top:20px;
+  border-top:1px solid rgba(255,255,255,0.3);
+  padding-top:15px;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .footer-container{
+    flex-direction:column;
+  }
+}
+
+.space{
+  line-height: 2;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <a href="index.html">
+    <img id="logo" src="foto/logo navbar.png" alt="logo">
+  </a>
+  <span class="menu-btn" onclick="openMenu()">☰</span>
+</div>
+
+<div id="menu" class="sidebar">
+  <a href="javascript:void(0)" class="close" onclick="closeMenu()">×</a>
+  <a href="index.html">Home</a>
+  <a href="#" onclick="toggleJurusan()">Kompetensi Keahlian▾</a>
+  <div id="submenu-jurusan" class="submenu">
+    <a href="farmasi.html">Farmasi</a>
+    <a href="tkj.html">TKJ</a>
+    <a href="tein.html">TEIN</a>
+  </div>
+  <a href="kontak.html">Kontak</a>
+  <a href="profil.html">Profil</a>
+</div>
+
+  <img class="content img" src="foto 2/gdn.jpg" alt="Foto Gedung">
+
+<div class="idk">
+<h1>Profil</h1>
+<p>SMK Guna Dharma Nusantara merupakan sekolah kejuruan yang memiliki kompetensi keahlian di bidang Farmasi, Teknik Komputer dan Jaringan (TKJ), serta Teknik Elektronika Industri (TEIN) dalam proses pendidikan dan pelatihannya. Sekolah ini peka terhadap perkembangan teknologi dan tuntutan kebutuhan dunia kerja, sehingga lulusan yang dihasilkan siap menghadapi perubahan zaman.
+<br><br>
+SMK Guna Dharma Nusantara dengan penuh kesadaran terus melakukan perubahan melalui berbagai inovasi dan improvisasi dalam sistem pembelajaran, serta mencari terobosan untuk meraih keberhasilan bagi peserta didiknya.
+<br><br>
+Tekad tersebut merupakan wujud nyata komitmen SMK Guna Dharma Nusantara yang didukung oleh sarana praktik yang lengkap dan mengikuti perkembangan teknologi terkini, waktu praktik yang memadai, serta pembelajaran berbasis standar industri dengan pelayanan pendidikan yang optimal.</p>
+<br><br>
+<h2>Sejarah Guna Dharma Nusantara</h2>
+<p>SMK Guna Dharma Nusantara merupakan salah satu sekolah menengah kejuruan swasta yang berlokasi di wilayah Cicalengka, Kabupaten Bandung, Jawa Barat. Sekolah ini berdiri di bawah naungan Yayasan Dokter Tisna Sukarna yang memiliki komitmen dalam mengembangkan dunia pendidikan, khususnya pendidikan kejuruan yang berorientasi pada kebutuhan dunia kerja dan industri.
+<br><br>
+Latar belakang berdirinya SMK Guna Dharma Nusantara tidak terlepas dari meningkatnya kebutuhan masyarakat akan pendidikan yang tidak hanya berfokus pada teori, tetapi juga pada keterampilan praktis yang siap diterapkan di dunia kerja. Pada awal tahun 2000-an, perkembangan industri dan teknologi yang pesat menuntut adanya lembaga pendidikan yang mampu mencetak tenaga kerja terampil, profesional, dan siap bersaing. Hal inilah yang mendorong yayasan untuk mendirikan sebuah sekolah kejuruan yang dapat menjawab tantangan tersebut.
+<br><br>
+Pada tanggal 18 November 2006, Yayasan Dokter Tisna Sukarna secara resmi dibentuk sebagai landasan hukum dalam penyelenggaraan pendidikan. Selanjutnya, pada tahun 2007, SMK Guna Dharma Nusantara resmi didirikan dan mulai beroperasi setelah memperoleh Surat Keputusan pendirian pada tanggal 9 Februari 2007 serta izin operasional pada 12 Maret 2007. Sejak saat itu, sekolah ini mulai menerima peserta didik baru dan memulai proses pembelajaran secara aktif.
+<br><br>
+Pada awal berdirinya, SMK Guna Dharma Nusantara hanya membuka satu program keahlian, yaitu Farmasi. Program ini dipilih karena memiliki prospek yang baik di bidang kesehatan serta tingginya kebutuhan tenaga kerja di sektor tersebut. Seiring berjalannya waktu dan meningkatnya minat masyarakat, sekolah kemudian melakukan pengembangan dengan membuka program keahlian baru, yaitu Teknik Komputer dan Jaringan (TKJ) serta Teknik Elektronika Industri (TEIN). Penambahan jurusan ini bertujuan untuk menyesuaikan dengan perkembangan teknologi serta kebutuhan industri yang terus berkembang.
+<br><br>
+Dalam perjalanannya, SMK Guna Dharma Nusantara terus mengalami perkembangan yang cukup signifikan. Hal ini dapat dilihat dari meningkatnya jumlah peserta didik setiap tahunnya, bertambahnya tenaga pendidik yang kompeten, serta pengembangan sarana dan prasarana pendukung kegiatan belajar mengajar. Sekolah juga terus berupaya meningkatkan kualitas pembelajaran melalui berbagai program, seperti praktik kerja lapangan (PKL), kerja sama dengan dunia usaha dan dunia industri (DUDI), serta kegiatan pengembangan keterampilan siswa.
+<br><br>
+Selain fokus pada aspek akademik dan keterampilan, SMK Guna Dharma Nusantara juga menanamkan nilai-nilai kedisiplinan, tanggung jawab, serta karakter yang baik kepada seluruh peserta didiknya. Hal ini dilakukan agar lulusan tidak hanya memiliki kemampuan teknis, tetapi juga memiliki sikap dan etika kerja yang baik.
+<br><br>
+Berkat komitmen dalam meningkatkan mutu pendidikan, SMK Guna Dharma Nusantara berhasil memperoleh akreditasi yang baik sebagai bentuk pengakuan terhadap kualitas penyelenggaraan pendidikan di sekolah tersebut. Kepercayaan masyarakat terhadap sekolah ini pun terus meningkat, menjadikannya sebagai salah satu pilihan utama dalam menempuh pendidikan kejuruan di wilayah Kabupaten Bandung dan sekitarnya.
+<br><br>
+Hingga saat ini, SMK Guna Dharma Nusantara terus berupaya untuk berkembang dan berinovasi dalam menghadapi tantangan zaman, khususnya di era digital dan globalisasi. Dengan mengedepankan kualitas pendidikan, keterampilan, dan pembentukan karakter, sekolah ini memiliki visi untuk mencetak lulusan yang siap kerja, mandiri, serta mampu bersaing baik di tingkat nasional maupun internasional.
+</p><br><br>
+
+<h2>Visi</h2>
+<p>Menjadi sekolah menengah kejuruan yang unggul dalam menghasilkan lulusan yang kompeten, berkarakter, mandiri, serta mampu bersaing di dunia kerja dan perkembangan teknologi.</p>
+<div class="space">
+<h2>Misi</h2>
+<ol>
+  <li>Menyelenggarakan pendidikan dan pelatihan yang berkualitas sesuai dengan perkembangan ilmu pengetahuan dan teknologi.</li>
+  <li>Membentuk peserta didik yang berakhlak baik, disiplin, dan bertanggung jawab.</li>
+  <li>Mengembangkan keterampilan siswa melalui pembelajaran berbasis praktik dan standar industri.</li>
+  <li>Menjalin kerja sama dengan dunia usaha dan dunia industri (DUDI) untuk meningkatkan kompetensi lulusan.</li>
+  <li>Mendorong peserta didik agar memiliki jiwa mandiri, kreatif, dan siap kerja.</li>
+  <li>Menyediakan sarana dan prasarana pendidikan yang memadai serta mengikuti perkembangan zaman.</li>
+</ol>
+</div>
+
+</div>
+<script>
+function openMenu(){
+  document.getElementById("menu").style.width = "250px";
+}
+
+function closeMenu(){
+  document.getElementById("menu").style.width = "0";
+}
+
+function toggleJurusan(){
+  var menu = document.getElementById("submenu-jurusan");
+  if(menu.style.display === "block"){
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
+
+<footer class="footer">
+  
+  <div class="footer-container">
+    
+    <!-- Kolom 1 -->
+    <div class="footer-col">
+      <img src="foto/logo navbar.png" class="footer-logo" >
+  
+<p style="font-size: 15px; position: relative; top: -30px; line-height: 1.6;"> 
+JL. RAYA BY PASS KM.30 <br>
+Cicalengka, Bandung <br>
+ West Java, Indonesia 40395</p>
+  
+    
+    <!-- Kolom 2 -->
+    <div class="footer-col">
+      <h4>Navigasi</h2>
+      <a href="index.html">Home</a>
+      <a href="profil.html">Profil</a>
+      <a href="farmasi.html">Farmasi</a>
+      <a href="tkj.html">TKJ</a>
+      <a href="tein.html">TEIN</a>
+      <a href="kontak.html">Kontak</a>
+    </div>
+    
+    <!-- Kolom 4 -->
+    <div class="footer-col">
+      <h2>Kontak</h2>
+      <p>📍 JL. RAYA BY PASS KM.30 CIPEUTAG - CIKOPO</p>
+      <p>📞 0227952201</p>
+      <p>✉️ gunadharmanusantarasmk@yahoo</p>
+    </div>
+    
+  </div>
+  
+  <!-- Sosial Media -->
+  <div class="social">
+    <a href="#"><img src="foto 2/email.png" width="38"> </a>
+    <a href="#"><img src="foto 2/wa.png" width="38" ></a>
+    <a href="#"><img src="foto 2/ig.png" width="38"</a>
+  </div>
+  
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2026 SMK Guna Dharma Nusantara | All Rights Reserved</p>
+  </div>
+  
+</footer>
+</body>
+</html>
+ 
